@@ -38,14 +38,14 @@ nav ul li a {
 
 /* Heading Styles */
 h1, h2 {
-    font-weight: 700; /* Bold font weight */
-    color: #005f73; /* Dark teal color */
-    text-transform: uppercase; /* Uppercase letters for a distinct look */
-    margin-bottom: 20px; /* Space below headings */
-    text-align: center; /* Center-aligned headings */
-    border-bottom: 2px solid #007bff; /* Horizontal line under headings */
-    display: inline-block; /* Allows the border to fit the text width */
-    padding-bottom: 5px; /* Spacing above the border */
+    font-weight: 700;
+    color: #005f73;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 /* About Me Section */
@@ -53,6 +53,7 @@ h1, h2 {
     display: flex;
     align-items: center;
     margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 .profile-pic {
@@ -61,10 +62,12 @@ h1, h2 {
     border-radius: 50%;
     margin-right: 20px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 .about-me-text {
     flex-grow: 1;
+    flex-basis: 50%;
 }
 
 /* Other Sections */
@@ -88,13 +91,14 @@ footer {
     .profile-pic {
         width: 80px;
         height: 80px;
+        margin-bottom: 20px;
     }
 
-    .about-me-text, .skills-text, .hobbies-text {
-        flex-grow: 1;
+    .about-me-text {
+        flex-basis: 100%;
     }
 
     h1, h2 {
-        font-size: smaller; /* Smaller font size on mobile */
+        font-size: smaller;
     }
 }
