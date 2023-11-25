@@ -43,6 +43,7 @@ h1, h2 {
     color: #003366; /* Dark navy blue for headings */
     margin-bottom: 20px;
     text-align: center;
+    font-size: 1.6em; /* Adjusted font size */
 }
 
 /* About Me Section with Image */
@@ -100,6 +101,6 @@ footer {
     }
 
     h1, h2 {
-        font-size: smaller;
+        font-size: 1.4em; /* Slightly smaller on mobile devices */
     }
 }
