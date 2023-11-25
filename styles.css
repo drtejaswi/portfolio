@@ -1,48 +1,88 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    padding: 0;
-    margin: 0;
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* Soft blue gradient */
+    padding: 20px;
 }
 
 header {
-    background: #007bff;
+    background: #005f73; /* Darker blue for contrast */
     color: #fff;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-    margin: 0;
+    animation: fadeInDown 1s ease-out;
 }
 
-header p {
-    margin: 0;
-    font-style: italic;
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 section {
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    margin: 20px 0;
     padding: 20px;
-    border-bottom: 1px solid #ddd;
+    border-radius: 10px;
 }
 
 section h2 {
     color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section p, section ul {
+    text-align: justify;
+}
+
+/* Hover Effects for Links */
+a:hover {
+    color: #025e73;
+    text-decoration: underline;
+}
+
+/* Contact Section Styles */
+#contact a {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#contact a:hover {
+    background: #005f73;
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
     background: #f4f4f4;
+    margin-top: 20px;
 }
 
+/* Responsive Design */
 @media screen and (max-width: 600px) {
-    body {
-        padding: 0 10px;
-    }
-
-    header, footer {
+    body, header, footer {
         padding-left: 10px;
         padding-right: 10px;
     }
