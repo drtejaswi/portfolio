@@ -6,40 +6,53 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Updated font */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(to right, #83a4d4, #b6fbff); /* Blue gradient */
+    background-color: #f4f4f4;
     padding: 20px;
 }
 
 header {
-    background: #003366; /* Navy blue */
+    background-color: #003366;
     color: #fff;
     padding: 40px 0;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-header h1 {
-    animation: fadeInDown 1s ease-out;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
 }
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+nav ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Heading Styles */
+h1, h2 {
+    font-weight: 700; /* Bold font weight */
+    color: #005f73; /* Dark teal color */
+    text-transform: uppercase; /* Uppercase letters for a distinct look */
+    margin-bottom: 20px; /* Space below headings */
+    text-align: center; /* Center-aligned headings */
+    border-bottom: 2px solid #007bff; /* Horizontal line under headings */
+    display: inline-block; /* Allows the border to fit the text width */
+    padding-bottom: 5px; /* Spacing above the border */
+}
+
+/* About Me Section */
 #about-me {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .profile-pic {
@@ -50,70 +63,38 @@ header h1 {
     object-fit: cover;
 }
 
-.about-me-text h2 {
-    margin-bottom: 10px;
+.about-me-text {
+    flex-grow: 1;
 }
 
+/* Other Sections */
 section {
-    background: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
-    margin: 20px 0;
+    background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
-}
-
-section h2 {
-    color: #007bff;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-section p, section ul {
-    text-align: justify;
-}
-
-/* Hover Effects for Links */
-a:hover {
-    color: #025e73;
-    text-decoration: underline;
-}
-
-/* Contact Section Styles */
-/* Contact Section Styles */
-#contact {
-    text-align: center;
-    padding: 20px;
-}
-
-#contact h2 {
-    margin-bottom: 15px;
-}
-
-#contact p {
-    margin: 5px 0;
-}
-
-#contact a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-#contact a:hover {
-    color: #005f73;
-    text-decoration: underline;
+    margin-top: 40px;
+    border-radius: 8px;
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #f4f4f4;
-    margin-top: 20px;
+    margin-top: 40px;
+    background-color: #333;
+    color: #fff;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 600px) {
-    body, header, footer {
-        padding-left: 10px;
-        padding-right: 10px;
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    .about-me-text, .skills-text, .hobbies-text {
+        flex-grow: 1;
+    }
+
+    h1, h2 {
+        font-size: smaller; /* Smaller font size on mobile */
     }
 }
